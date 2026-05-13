@@ -377,7 +377,7 @@ const EMAILJS_TEMPLATE_ID = 'template_7yi5zii';  // e.g. 'template_xxxxxx'
   sdk.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
   sdk.onload = () => {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    console.log('[NEXCORE] EmailJS ready');
+    console.log('[GAMALIEL] EmailJS ready');
   };
   document.head.appendChild(sdk);
 })();
@@ -432,7 +432,7 @@ async function handleNotify() {
       dateStyle: 'full', timeStyle: 'short',
       timeZone: 'Africa/Johannesburg'
     }),
-    page: 'NEXCORE — Software Development Coming Soon',
+    page: 'GAMALIEL — Coming Soon',
     reply_to: email
   };
 
@@ -455,10 +455,10 @@ async function handleNotify() {
       throw new Error('Status ' + result.status);
     }
   } catch (err) {
-    console.error('[NEXCORE] EmailJS error:', err);
+    console.error('[GAMALIEL] EmailJS error:', err);
     btn.disabled    = false;
     btn.textContent = 'Retry';
-    showMsg('✕  Could not register. Please email us at hello@nexcore.tech', 'error');
+    showMsg('✕  Could not register. Please email us at hello@gamaliel.co.za', 'error');
   }
 }
 
